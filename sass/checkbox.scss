@@ -1,0 +1,85 @@
+/* iCheck plugin Line skin, main
+----------------------------------- */
+.icheckbox_line-main,
+.iradio_line-main {
+    position: relative;
+    display: inline-block;
+    margin: 0 $marge;
+    padding: 12px 50px;
+    font-weight: bold;
+    font-size: 19px;
+    font-size: 1.9rem;
+    line-height: 17px;
+    color: $mainColor2;
+    background: #FFF;
+    border: none;
+    border: 1px solid $mainColor2;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    @include border-radius(3px);
+    cursor: pointer;
+}
+.icheckbox_line-main:first-of-type,
+.iradio_line-main:first-of-type {
+    margin-left: 0;
+}
+    .icheckbox_line-main .icheck_line-icon,
+    .iradio_line-main .icheck_line-icon {
+        position: absolute;
+        top: 50%;
+        left: 13px;
+        width: 26px;
+        height: 22px;
+        margin: -10px 0 0 0;
+        padding: 0;
+        overflow: hidden;
+        background: url(../img/line@2x.png) no-repeat;
+        background-position: -30px 0;
+        border: none;
+    }
+    .icheckbox_line-main.hover,
+    .icheckbox_line-main.checked.hover,
+    .iradio_line-main.hover {
+        background: $mainColor2;
+        color: #FFF;
+    }
+    .icheckbox_line-main.checked:hover .icheck_line-icon {
+        // background: blue;
+        background-position: 0px 0;
+    }
+    .icheckbox_line-main.checked,
+    .iradio_line-main.checked {
+        background: $mainColor2;
+        color: #FFF;
+    }
+        .icheckbox_line-main.checked .icheck_line-icon,
+        .iradio_line-main.checked .icheck_line-icon {
+            // background-position: -30px 0;
+        }
+    .icheckbox_line-main.disabled,
+    .iradio_line-main.disabled {
+        background: $mainColor2;
+        cursor: default;
+    }
+        .icheckbox_line-main.disabled .icheck_line-icon,
+        .iradio_line-main.disabled .icheck_line-icon {
+            // background-position: -30px 0;
+        }
+    .icheckbox_line-main.checked.disabled,
+    .iradio_line-main.checked.disabled {
+        background: $mainColor2;
+    }
+        .icheckbox_line-main.checked.disabled .icheck_line-icon,
+        .iradio_line-main.checked.disabled .icheck_line-icon {
+            background-position: -45px 0;
+        }
+
+/* HiDPI support */
+@media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+    .icheckbox_line-main .icheck_line-icon,
+    .iradio_line-main .icheck_line-icon {
+        background-image: url(line@2x.png);
+        -webkit-background-size: 60px 13px;
+        background-size: 60px 13px;
+    }
+}

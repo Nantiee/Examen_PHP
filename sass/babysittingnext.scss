@@ -1,0 +1,54 @@
+#next {
+	position: relative;
+}
+.babysitting-tabs {
+	overflow: hidden;
+	// top: 2px;
+	position: relative;
+	// background: DarkTurquoise;
+}
+
+.babysitting-tabs .bs-tab {
+	position: relative;
+	cursor: pointer;
+	padding: 0;
+	float: left;
+	background: DarkOrange;
+	border: 1px solid $mainColor2;
+	background: $veryLightGray;
+	h2 {
+		margin: 0;
+	}
+	&:first-of-type {
+		// border-left: 1px solid $lightGray;
+	}
+	&:last-of-type {border-left: none;}
+	&:last-of-type h2 {
+		width: 100%;
+		text-align: right;
+	}
+}
+.babysitting-tabs .active-tab {
+	background: #FFF;
+	border-bottom: none;
+	z-index: 20;
+	border-bottom: 1px solid #FFF;
+
+}
+.babysittingList {
+	background: #FFF;
+	position: absolute;
+	width: 100%;
+	border: 1px solid $lightGray;
+	border-top: none;
+	box-shadow: 0px -7px 0px $mainColor2;
+	li {
+		border-bottom: 1px solid $lightGray;
+	}
+	li:last-of-type {
+		border: none;
+	}
+}
+.babysittingList.babysitting-last {
+	display: none;
+}

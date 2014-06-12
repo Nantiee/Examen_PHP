@@ -1,0 +1,304 @@
+// CALENDAR PERSO
+.dispos {
+	margin-top: 20px;
+}
+.calendar, .calendar-form {
+	float: left;
+}
+.calendar {
+	padding-right: 0;
+}
+.calendar-form {
+	position: relative;
+	// border-top: 1px solid $lightGray;
+	// border-right: 1px solid $lightGray;
+	// border-bottom: 1px solid $lightGray;
+	border: 1px solid $lightGray;
+	top: 50px;
+	padding: 0;
+	h2 {
+		padding: 16px 16px 10px 16px;
+		margin-bottom: 0;
+		border-bottom: 7px solid $mainColor2;
+	}
+}
+#dashboard-calendar {
+	padding: $marge;
+	margin-bottom: 40px;
+}
+.generate-calendar {
+	overflow: hidden;
+	border-right: 1px solid $lightGray;
+	border-bottom: 1px solid $lightGray;
+	border-left: 1px solid $lightGray;
+	box-shadow: 0px -7px 0px $mainColor2;
+}
+.generate-calendar .periods {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	table {
+		width: 100%;
+	}
+	.year {
+		position: absolute;
+		font-size: 35px;
+		color: $mainColor2;
+		width: 100%;
+		text-align: center;
+		font-weight: 700;
+		top: -35px;
+	}
+	.months {
+		border-bottom: 1px solid $mainColor2;
+		color: $mainColor2;
+		ul li {
+			display: inline-block;
+			float: left;
+		}
+		a {
+			color: $gray;
+			&:hover {
+				color: $mainColor2;
+			}
+		}
+	}
+	.months, .months ul {
+		overflow: hidden;
+	}
+	.months ul li a {
+		font-size: 28px;
+	}
+	.months .active {
+		text-align: center;
+		width: 40%;
+		padding: 10px;
+		a {
+			color: $mainColor2;
+		}
+	}
+	.months .prev, .months .next {
+		width: 30%;
+		a {
+			font-size: 19px;
+		}
+	}
+	.months .prev {
+		padding: 10px;
+		&:before {
+			content: '\f104';
+			display: inline-block;
+			font-family: 'FontAwesome';
+			font-size: 28px;
+			padding-right: 15px;
+		}
+	}
+	.months .next {
+		text-align: right;
+		padding: 10px;
+		&:after {
+			content: '\f105';
+			display: inline-block;
+			font-family: 'FontAwesome';
+			font-size: 28px;
+			padding-left: 15px;
+		}
+	}
+	thead {
+		background: $mainColor2;
+		color: #FFF;
+		font-size: 20px;
+		tr th {
+			padding: 10px;
+			text-align: center;
+			&:last-of-type {
+				box-shadow: 7px 0px 0px #ff4b4b;
+			}
+		}
+	}
+	.day {
+
+	}
+	tr {
+		width: 100%;
+		td {
+			position: relative;
+			width: $col-cal;
+			text-align: right;
+			color: $gray;
+			border-right: 1px solid lighten($lightGray, 5%);
+			border-bottom: 1px solid lighten($lightGray, 5%);
+			div.day {
+				cursor: pointer;
+				height: 70px;
+				padding: 10px;
+			}
+			.daytitle {
+				display: none;
+			}
+		}
+		td.today .day {
+			// background: #BD362F;
+			background: $lightGray;
+			// color: #FFF;
+		}
+
+		ul.events {
+			position: absolute;
+			right: 0;
+			color: #FFF;
+			// background: $mainColor2;
+			bottom: 0;
+			// border-bottom: 4px solid #c5e179;
+			border-bottom: 4px solid $lightGray;
+			width: 100%;
+		}
+
+			li.event, li.dispo {
+				display: none;
+			}
+
+		.day.blocked {
+			background: $mainColor2;
+			color: #FFF;
+		}
+		.day.dateSelect {
+			// border: 5px solid #c5e179;
+			background: lighten($green, 20%);
+		}
+
+	}
+
+}
+
+.calendar-form .details {
+	// padding: 16px;
+	// border-right: 1px solid $lightGray;
+	// border-bottom: 1px solid $lightGray;
+	// border-top: 1px solid $lightGray;
+	// border: 1px solid $lightGray;
+	// box-shadow: 0px -7px 0px $mainColor2;
+	ul.date {
+		padding: 16px 16px 0 16px;
+		font-size: 24px;
+		color: $mainColor2;
+		margin-bottom: 10px;
+		line-height: 28px;
+	}
+	form.becomeFree {
+		legend {
+			color: #FFF;
+			padding: 10px;
+			width: 100%;
+			font-size: 19px;
+			background: $gray;
+		}
+		div {
+			padding: 16px;
+		}
+		div:first-of-type {
+			margin-top: 16px;
+		}
+		div i {
+			color: $mainColor2;
+			width: 55px;
+			display: inline-block;
+			&:last-of-type {
+				text-align: center;
+			}
+		}
+		div input[type=text], input[type=submit], select {
+			border: 1px solid $mainColor2;
+			@include border-radius(3px);
+			padding: 6px 10px;
+			font-weight: 700;
+			color: $mainColor2;
+		    font-size: 16px;
+		    font-size: 1.6rem;
+		    text-align: center;
+		    @include appearance(none);
+			width: 85px;
+			background: #FFF;
+			&.complete {
+		    	@include input-placeholder {
+					color: #FFF;
+				}
+		    	background: $mainColor2;
+		    	color: #FFF;
+		    }
+		}
+		select {padding: 6px 27px;}
+		input[type=submit] {
+			border: none;
+			cursor: pointer;
+			display: block;
+			width: 100%;
+			background: lighten($gray, 35%);
+			@include border-radius(0);
+			color: #FFF;
+			margin: 16px auto 0;
+			padding: 12px;
+			font-family:"proxima-nova", Helvetica, Arial, sans-serif;
+			font-size: 22px;
+			text-transform: uppercase;
+			&:hover {
+				background: $mainColor2;
+			}
+		}
+	}
+	ul.day-details {
+		li.event, li.dispo {
+			color: $gray;
+			font-size: 22px;
+			padding: 5px 10px 5px 40px;
+		}
+		li.dispo {
+			float: left;
+		}
+		li.dispo::before, li.event::before {
+			font-family: 'FontAwesome';
+			position: absolute;
+			color: $mainColor2;
+			display: inline-block;
+			width: 25px;
+			padding: 0 10px 0;
+			left: 0;
+		}
+		li.dispo:first-of-type, li.event:nth-of-type(2) {
+			float: left;
+			padding-right: 0;
+		}
+		li.dispo:nth-of-type(2), li.event:nth-of-type(3) {
+			display: inline-block;
+			padding-left: 0;
+		}
+		li.event:first-of-type:before {content: "\f09b";}
+		li.dispo:first-of-type:before, li.event:nth-of-type(2):before {content: "\f017";}
+		li.dispo:nth-of-type(1)::after, li.event:nth-of-type(2):after {
+			content: "-";
+			text-align: center;
+			padding: 0 5px;
+		}
+		li.event:nth-of-type(4):before {content: "\f015";}
+		li.event:last-of-type:before {content: "\f095";}
+
+		li.dispo.delete {
+			float: right;
+			a {
+				color: $gray;
+			}
+			a:hover {
+				color: $mainColor2;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+

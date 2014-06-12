@@ -1,0 +1,87 @@
+@media (max-width: 1400px) {
+	header #header-search form>div {
+		width: 100%;
+	}
+	header #header-search form>div.col-8 {
+		padding-left: 65px;
+		padding-right: 4px;
+		span:first-of-type {
+			padding: 15px 8px;
+			position: absolute;
+			left: 8px;
+			width: 69px;
+		}
+		#geocomplete {width: 100%;}
+	}
+	header #header-search form>div.submit {
+		position: relative;
+		padding: 5px;
+		height: auto;
+		input[type="submit"] {
+			width: 100%;
+			font-size: 18px;
+			height: auto;
+			padding: 7px;
+		}
+	}
+}
+@media (max-width: 1200px) {
+	#header, #content {@include calc(width, "100% - 80px");}
+	#sidebar {width: 80px;}
+	#sidebar a.profil img {
+		width: 83%;
+		border: 2px solid #FFF;
+	}
+	#sidebar a.profil img+span {
+		display: none;
+	}
+	#sidebar nav ul li a {
+		text-align: center;
+	}
+	#sidebar nav ul li a span {
+		display: none;
+	}
+
+	#landing .col-12 .col-6.parent {padding-left: 7%;}
+	#landing .col-12 .col-6.babysitter {padding-right: 5%;}
+	#landing .col-12 .col-6 a {
+		width: 350px;
+		padding: 30px 20px 25px 20px;
+}
+
+}
+@media (max-width: 1024px) {
+	// HEADER
+	// #header, #content {@include calc(width, "100% - 80px");}
+	// #sidebar {width: 80px;}
+	// #sidebar a.profil img {
+	// 	width: 83%;
+	// 	border: 2px solid #FFF;
+	// }
+	#sidebar a.profil img+span {
+		display: none;
+	}
+	#sidebar nav ul li a {
+		text-align: center;
+	}
+	#sidebar nav ul li a span {
+		display: none;
+	}
+
+
+	// content
+	.edit-profil>div {
+		width: 100%;
+	}
+	#content.profil .profil-banner .banner-infos ul li {
+		font-size: 22px;
+	}
+
+
+
+
+
+
+
+
+}

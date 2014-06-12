@@ -1,0 +1,311 @@
+// EDIT PROFIL
+a.link-profil {
+	z-index: 800;
+	position: absolute;
+	right: $marge*2;
+	color: $lightGray;
+	&:hover {
+		color: $mainColor2;
+	}
+	i {
+		color: $mainColor2;
+	}
+}
+.edit-profil .col-6 {
+	float: left;
+}
+.edit-profil .col-6 .edit-blocs {
+	margin-bottom: 60px;
+	height: auto;
+	padding: 0;
+}
+.edit-blocs form * {
+	font-size: 19px;
+}
+.edit-blocs form {
+	padding: 16px;
+	fieldset {
+		padding: 0;
+	}
+	div {
+		overflow: hidden;
+	}
+	input, textarea {
+		background: $veryLightGray;
+		color: $gray;
+		@include input-placeholder {
+			color: gray;
+		}
+	}
+	input:focus, textarea:focus {
+		outline: none;
+	}
+	label {
+		text-transform: uppercase;
+		color: $mainColor2;
+		font-weight: normal;
+		width: 100%;
+		display: block;
+		padding: 0;
+		line-height: 28px;
+		margin: 26px 0 10px 0;
+	}
+	&.bs_description label {
+		text-transform: none;
+	}
+	label[for=child_description] {text-transform: none;}
+	input[type=submit] {
+		cursor: pointer;
+		background: rgba($mainColor1, .3);
+		color: #FFF;
+		width: 100%;
+		border: 0;
+		padding: 12px;
+		margin: 16px 0 0 0 ;
+		font-family:"proxima-nova", Helvetica, Arial, sans-serif;
+		&:hover {
+			background: $mainColor1;
+		}
+	}
+	input[type='text'],input[type='password'], textarea {
+		font-family:"proxima-nova", Helvetica, Arial, sans-serif;
+		border: none;
+		padding: 7px 16px;
+		line-height: 28px;
+		&#edit_adress {
+			height: 110px;
+		}
+	}
+	textarea {
+		padding: 16px;
+		height: 190px;
+	}
+	div:first-of-type>label {
+		margin-top: 0;
+	}
+	.infos-1 {
+		width: 100%;
+		clear: both;
+	}
+	.infos-2 {
+		width: 50%;
+		float: left;
+	}
+	.infos-3 {
+		width: 33%;
+		float: left;
+	}
+	.infos-2 input {
+		width: 85%;
+	}
+	.infos-2:last-of-type input {
+		float: right;
+	}
+	.infos-1 textarea, .infos-1 input {
+		width: 100%;
+	}
+	#docteurphone {
+		float: right;
+		clear: both;
+	}
+	.medecin .infos-2 {
+		margin-bottom: 2px;
+	}
+	.medecin .infos-1 {
+		clear: both;
+	}
+	.medecin #docteuradress {
+		height: 110px;
+	}
+	.infos-2>input {
+		margin-bottom: 2px;
+	}
+	.infos-2.name input, .infos-2.age input {
+		float: left;
+	}
+	.name-photo {
+		// height: 220px;
+	}
+	.ratio {
+		position: relative;
+		width: 70%;
+		margin: 0 auto;
+	}
+	.ratio:before {
+		content: "";
+		display: block;
+		padding-top: 100%;
+	}
+	.photo {
+		height: 100%;
+		cursor: pointer;
+		position: relative;
+		float: right;
+		label {
+			margin-top: 0;
+			text-align: center;
+		}
+		div.photo_preview {
+			position:  absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			height: 100%;
+			width: 100%;
+			background-image: url('../img/profils/pamplemousse.jpg');
+			background-position: center;
+			background-size: cover;
+		}
+		img {
+
+		}
+		#edit_photo {
+			display: none;
+		}
+		&:after {
+			content: "";
+			display: block;
+			opacity: 0;
+			position: absolute;
+			pointer-events: none;
+			height: 100%;
+			width: 100%;
+			padding-top: 15%;
+			background-color: rgba(255, 255, 255, .4);
+			background-image: url('../img/upload.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 50%;
+			top: 0;
+			@include transition(0.2s);
+		}
+
+	}
+	.photo:hover:after {
+		opacity: .9;
+		@include transition(0.4s);
+	}
+	label[for=edit_password] {
+		// margin-top: 0;
+	}
+	.child_birth label {
+		text-align: right;
+		margin-top: 0;
+	}
+	.child_name p.erreurs {
+		text-align: left;
+		border-right: 1px solid #FFF;
+	}
+	.datefield {
+		width: 158px;
+		width: auto;
+		float: right;
+		text-align: right;
+		margin: 2px 0;
+	}
+	.datefield input.number {
+		float: left;
+		padding: 7px;
+		text-align: center;
+		width: auto;
+		margin: 0;
+		&:first-of-type {
+			border-right: 1px solid $lightGray;
+		}
+		&:last-of-type {
+			border-left: 1px solid $lightGray;
+			width: 70px;
+		}
+	}
+}
+.edit-blocs .child {
+	border-bottom: 1px solid $lightGray;
+}
+.edit-blocs a#add-child {
+	width: 100%;
+	display: block;
+	padding: 16px;
+	color: $mainColor2;
+	border-bottom: 1px solid $lightGray;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+p.erreurs {
+	display: none;
+	right: 410px;
+	left: 0;
+	font-size: 18px;
+	background: $mainColor2;
+	text-align: right;
+	color: #FFF;
+	padding: 10px;
+	width: auto;
+	float: none;
+	clear: both;
+	margin-bottom: 0px;
+}
+.edit-child .infos-1 {
+	clear: both;
+}
+
+
+// PROFIL BS
+.edit-blocs form.bs_description .infos-1, .edit-blocs form.bs_babysittings .infos-1 {
+	margin-bottom: 30px;
+}
+.edit-blocs form.bs_description .infos-1:last-of-type, .edit-blocs form.bs_babysittings .infos-1:last-of-type {
+	margin-bottom: 0;
+}
+.edit-blocs form.bs_description p, .edit-blocs form.bs_babysittings p {
+	margin-bottom: 10px;
+	color: $mainColor2;
+	line-height: 26px;
+	&.valid {color: #FFF;}
+}
+.edit-blocs form .age_enfants {
+	width: 60px;
+	float: left;
+	label {display: none;}
+	input {
+		margin: 0;
+		width: 100%;
+		text-align: center;
+		padding: 10px 5px 3px 5px;
+	}
+}
+.edit-blocs form.bs_description span, .edit-blocs form.bs_babysittings span {
+	height: 41px;
+	padding: 20px;
+	float: left;
+	color: $gray;
+
+}
+.edit-blocs form .new_born input[type=checkbox] {
+	display: inline-block;
+	width: 20px;
+}
+
+.edit-blocs form .new_born label {
+	display: inline;
+	text-transform: none;
+}
+
+p.valid, p.erreur {
+	width: 100%;
+	text-align: center;
+	color: #FFF;
+	padding: 14px;
+	margin-top: 16px;
+}
+p.valid {
+	background: $green;
+}
+p.erreur {
+	background: $red;
+}
+
+
+
+
